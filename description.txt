@@ -1,0 +1,21 @@
+------------------------
+Task2
+------------------------
+Controller の役割について、説明してください
+
+Controllerとは・・・
+Routingから受け取った情報をModelでデータベースに保存したり
+取得したりViewへは結果を渡し表示するデータを生成する。
+
+------------------------
+Task3
+------------------------
+ControllerとRoutingの役割について、説明してください
+
+Routingとは・・・
+Laravel上では一番最初にアクセスする場所
+ここで書いたプログラミングが生成される
+
+RoutingとControllerの関係
+Routingでプログラムが生成された後、設定内容をControllerに
+渡す。ControllerはModelやViewへRoutingで生成された内容を渡す。
