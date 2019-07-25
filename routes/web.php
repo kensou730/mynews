@@ -26,10 +26,12 @@ ProfileController の　edit Action に割り当たるように設定する
 */
 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('news/create', 'Admin¥NewsController@add');
+    Route::get('news/create', 'Admin\NewsController@add');
     /*------------Task4-start----------------------------------*/
-    Route::get('profile/edit', 'Admin¥ProfileController@edit');
+    Route::get('profile/edit', 'Admin\ProfileController@edit');
     /*------------Task4-end------------------------------------*/
+    Route::get('profile/create', 'Admin\ProfileController@add');
+
 });
 
 /*
