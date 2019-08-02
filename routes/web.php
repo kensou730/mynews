@@ -25,13 +25,15 @@ admin/profile/edit にアクセスしたら
 ProfileController の　edit Action に割り当たるように設定する
 */
 
-Route::group(['prefix' => 'admin'], function(){
-    Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+    Route::get('news/create', 'Admin\NewsController@add');
+    Route::post('news/create', 'Admin\NewsController@create');
     /*------------Task4-start----------------------------------*/
-    Route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth');
+    Route::get('profile/edit', 'Admin\ProfileController@edit');
+    Route::post('profile/edit', 'Admin\ProfileController@update');
     /*------------Task4-end------------------------------------*/
-    Route::get('profile/create', 'Admin\ProfileController@add')->middleware('auth');
-
+    Route::get('profile/create', 'Admin\ProfileController@add');
+    Route::post('profile/create', 'Admin\ProfileController@create');
 });
 
 /*
@@ -44,10 +46,6 @@ Route::group(['prefix' => 'XXX'], function(){
     Route::get('bbb','Admin\AAAController@add');
 });
 /*------------Task3-end----------------------------------*/
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
