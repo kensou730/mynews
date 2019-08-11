@@ -44,6 +44,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::get('profile/delete', 'Admin\ProfileController@delete');
     
 
+
+
 });
 
 /*
