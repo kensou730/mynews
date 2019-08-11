@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <p>課題です！！追加してみます!</p>
+        <p>課題です！！追加してみます!kensuu1234のみ反映テスト</p>
         <hr color="#c0c0c0">
         @if (!is_null($headline))
             <div class="row">
